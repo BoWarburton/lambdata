@@ -1,2 +1,4 @@
-# lambdata
-A Python package with useful data science functions
+# lambdata-ewarburton
+A Python package with functions for managing x12 EDI files
+Usage:
+Example:
