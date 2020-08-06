@@ -4,5 +4,7 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="module4-software-testing-documentation-and-licensing" />
+    <orderEntry type="module" module-name="ds-unit-3" />
   </component>
 </module>

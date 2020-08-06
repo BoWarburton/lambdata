@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../.idea/ds-unit-3.iml" filepath="$PROJECT_DIR$/../.idea/ds-unit-3.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/lambdata.iml" filepath="$PROJECT_DIR$/.idea/lambdata.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../DS-Unit-3-Sprint-1-Software-Engineering/module4-software-testing-documentation-and-licensing/.idea/module4-software-testing-documentation-and-licensing.iml" filepath="$PROJECT_DIR$/../DS-Unit-3-Sprint-1-Software-Engineering/module4-software-testing-documentation-and-licensing/.idea/module4-software-testing-documentation-and-licensing.iml" />
     </modules>
   </component>
 </project>
