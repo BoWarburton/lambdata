@@ -1,8 +1,22 @@
 #!/usr/bin/env python
 """Tests for lambdata modules."""
 
+import unittest
+from random import randint
+# unittest supports a type of tests called unit tests
+# A unit is the smallest cohesive piece of code we can test
+# (usually something like a function or method)
+
+# Other types of tests (you won't write now, just to be aware):
+# - Integration: testing multiple pieces working together
+# - End to end: testing a full "flow"/use case
+# There are also manual/non-code tests that are common
+# - User acceptance testing: show it to a user, get feedback
+# - Manual running and checking
+
 from example_module import increment, COLORS
 from oop_examples import SocialMediaUser
+
 
 class ExampleUnitTests(unittest.TestCase):
     """Making sure our examples behave as expected."""
@@ -17,40 +31,40 @@ class ExampleUnitTests(unittest.TestCase):
         self.assertEqual(y2, -105)
 
     def test_increment_random(self):
+        """Test increment with randomly generated input."""
         x1 = randint(1, 1000000)
-        y1 = x1 + 1
-        self.assertEqual(y1, x1+ 1)
+        y1 = increment(x1)
+        self.assertEqual(y1, x1 + 1)
 
     def test_colors(self):
-        """Presence/absence of expected colors"""
+        """Testing presence/absence of expected colors."""
         self.assertIn('Orange', COLORS)
         self.assertNotIn('Aquamarine', COLORS)
         self.assertEqual(len(COLORS), 6)
 
+
 class SocialMediaUserTests(unittest.TestCase):
-    """Test instantiation, use of SocialMediaUser"""
+    """Tests the instantiation and use of SocialMediaUser."""
     def test_name(self):
-        """Test name assigned correctly"""
+        """Test that the name field is assigned correctly."""
         user1 = SocialMediaUser('Jane')
         user2 = SocialMediaUser('Joe')
         self.assertEqual(user1.name, 'Jane')
         self.assertEqual(user2.name, 'Joe')
 
     def test_default_upvotes(self):
+        """Test that the default upvotes of a new user is 0."""
         user1 = SocialMediaUser('Jane')
         self.assertEqual(user1.upvotes, 0)
 
     def test_unpopular(self):
+        """Test that a user with <=100 upvotes is not popular."""
         user1 = SocialMediaUser('Joe')
         for _ in range(randint(1, 100)):
             user1.receive_upvote()
-        self.assertEqual(user1.is_popular(), False)
 
-    def test_popular(self):
-        user1 = SocialMediaUser('Jane')
-        for _ in range(randint(101, 10000)):
-            user1.receive_upvote()
-        self.assertEqual(user1.is_popular(), Tru)
+
+
 
 if __name__ == '__main__':
     # This conditional is for code that will be run
